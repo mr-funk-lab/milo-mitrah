@@ -57,6 +57,7 @@ const decorateForeground = async (el, rows) => {
     } else if (i === (rows.length - 1)) {
       row.classList.add('card-footer');
       if (!row.textContent.trim()) row.classList.add('empty');
+      // Add action-area class for single CTA links
       row.querySelectorAll('div > a:only-child').forEach((link) => {
         link.parentElement.classList.add('action-area');
       });
